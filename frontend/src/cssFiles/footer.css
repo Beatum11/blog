@@ -1,0 +1,11 @@
+.footerObj{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    height: 7vh;
+    margin-top: 8rem;
+    margin-bottom: 0px;
+    background-color: black;
+    color: white;
+}

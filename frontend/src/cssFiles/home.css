@@ -1,0 +1,22 @@
+.home-container{
+
+}
+
+.home-container ul{
+    list-style: none;
+}
+
+.home-container li:hover{
+    cursor: pointer;
+}
+
+/* .home-container footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    height: 7vh;
+    margin-top: 3rem;
+    background-color: black;
+    color: white;
+} */

@@ -1,0 +1,40 @@
+.menu-container{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+
+
+.logo-part{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-container p{
+    font-size: 1.56rem;
+}
+
+.menu-container img{
+    height: 4.375rem;
+}
+
+.menu-container ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.menu-container li{
+    margin-right: 1.25rem;
+    font-size: 1.31rem;
+}
+
+.menu-container li:hover{
+    cursor: pointer;
+}
+
+.user-name{
+    text-transform: uppercase;
+}

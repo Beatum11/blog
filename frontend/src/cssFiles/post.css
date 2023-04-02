@@ -1,0 +1,32 @@
+.postPage-container{
+    max-width: 70%;
+    margin: 2rem auto;
+}
+
+.postPage-container form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.postPage-container label{
+    font-size: 1.5rem;
+    margin: 0.7rem 0.2rem;
+}
+
+.postPage-container input{
+    max-width: 30rem;
+    min-height: 1.5rem;
+}
+
+.postPage-container textarea{
+    max-width: 30rem;
+    min-height: 10rem;
+    
+}
+
+.textSize{
+    font-size: 1.2rem;
+}
+
