@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const Post = require('./models/post');
 const User = require('./models/user');
 const bcrypt = require('bcrypt');
+const { sendStatus } = require("express/lib/response");
 const saltRounds = 10;
 const url = process.env.DATABASE_URL;
 
@@ -78,7 +79,30 @@ app.get('/posts/:id', async(req, res) => {
     res.json({
         post: postResult
     });
-})
+});
+
+//_________________________________________ LogIn basic logic
+
+app.get('/users', async (req, res) => {
+
+    const { name, password } = req.query;
+    console.log('Received request:', req.query);
+  
+    try {
+      const user = await User.findOne({ name });
+      if(user){
+        const result = await bcrypt.compare(password, user.password);
+        if(result) res.sendStatus(200);
+      }
+
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+    } catch (error) {
+      return res.status(500).json({ error: error.message });
+    }
+
+});
 
 
 
